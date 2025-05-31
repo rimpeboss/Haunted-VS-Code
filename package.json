@@ -1,0 +1,107 @@
+{
+  "name": "haunted-vscode",
+  "displayName": "👻 Haunted VS Code",
+  "description": "A spooky VS Code extension that adds ghost cursor trails, flickering themes, and creepy sound effects",
+  "version": "1.0.0",
+  "publisher": "nimpeboss",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other",
+    "Themes"
+  ],
+  "keywords": [
+    "halloween",
+    "spooky",
+    "ghost",
+    "effects",
+    "fun"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "haunted.enable",
+        "title": "👻 Summon the Spirits",
+        "category": "Haunted"
+      },
+      {
+        "command": "haunted.disable",
+        "title": "✨ Exorcise the Editor",
+        "category": "Haunted"
+      },
+      {
+        "command": "haunted.toggleGhostCursor",
+        "title": "👻 Toggle Ghost Cursor",
+        "category": "Haunted"
+      },
+      {
+        "command": "haunted.toggleFlickering",
+        "title": "🔥 Toggle Theme Flickering",
+        "category": "Haunted"
+      },
+      {
+        "command": "haunted.toggleSounds",
+        "title": "🔊 Toggle Spooky Sounds",
+        "category": "Haunted"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "haunted.disable",
+        "key": "ctrl+shift+alt+e",
+        "mac": "cmd+shift+alt+e",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "Haunted VS Code",
+      "properties": {
+        "haunted.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable haunted effects"
+        },
+        "haunted.ghostCursor": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable ghost cursor trails"
+        },
+        "haunted.flickering": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable theme flickering"
+        },
+        "haunted.sounds": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable spooky sound effects"
+        },
+        "haunted.intensity": {
+          "type": "number",
+          "default": 5,
+          "minimum": 1,
+          "maximum": 10,
+          "description": "Haunting intensity level (1-10)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "^1.100.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "vscode": "^1.1.34"
+  }
+}

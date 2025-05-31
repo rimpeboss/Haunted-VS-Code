@@ -1,0 +1,17 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "typescript.preferences.includePackageJsonAutoImports": "on",
+        "typescript.suggest.autoImports": true,
+        "typescript.updateImportsOnFileMove.enabled": "always"
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-vscode.vscode-typescript-next"
+        ]
+    }
+}
