@@ -4,6 +4,10 @@
   "description": "A spooky VS Code extension that adds ghost cursor trails, flickering themes, and creepy sound effects",
   "version": "1.0.0",
   "publisher": "nimpeboss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nimpeboss/haunted-vscode"
+  },
   "engines": {
     "vscode": "^1.74.0"
   },
